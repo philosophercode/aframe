@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A-Frame PLANES</title>
+  
+  
+  
+  
+  
+</head>
+
+<body>
+  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+<a-scene>
+  <a-asset>
+    <img id="imageWater" crossorigin src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Water_quality.jpg">
+    <img id="imageMars" crossorigin src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Gusev_Spirit_01.jpg">
+    <img id="imageGreen" crossorigin src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Cumulus_clouds_panorama.jpg">
+    
+  
+  
+  </a-asset>
+
+  <a-torus position="0 0 -15" rotation="0 0 0" radius="5" color="white">
+    <a-animation attribute="rotation"
+               dur="1000"
+               fill="forwards"
+               to="360 360 360"
+               repeat="indefinite">
+    </a-animation>
+    <a-animation attribute="material.color" 
+                 from="blue" 
+                 to="lightblue" 
+                 dur="1000"
+                 repeat="indefinite">
+    </a-animation>
+  </a-torus>
+    <a-torus position="0 0 -15" rotation="0 0 0" radius="4" color="white">
+    <a-animation attribute="rotation"
+               dur="1000"
+               fill="forwards"
+               to="-360 -360 -360"
+               repeat="indefinite">
+    </a-animation>
+    <a-animation attribute="material.color" 
+                 from="lightblue" 
+                 to="blue" 
+                 dur="1000"
+                 repeat="indefinite">
+    </a-animation>
+  </a-torus>
+  
+
+  <a-entity>
+    <a-plane position="0 2 -15" rotation="90 0 0" width="4" height="4" color="red"  src="#imageMars"></a-plane>
+    <a-plane position="0 1.5 -15" rotation="-90 0 0" width="3" height="3" color="orange"></a-plane>
+    <a-plane position="0 1 -15" rotation="-90 0 0" width="2" height="2" color="yellow"></a-plane>
+    
+    <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite">
+    </a-animation>
+  </a-entity>
+  
+
+
+  <a-sphere position="0 0 -15" rotation="0 0 0" radius="1" src="#imageWater">
+    <a-animation attribute="rotation"
+               dur="15000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite">
+    </a-animation>
+  </a-sphere>
+  
+
+
+  <a-entity>
+    <a-plane position="0 -1 -15" rotation="-90 0 0" width="2" height="2" color="yellow"></a-plane>
+    <a-plane position="0 -1.5 -15" rotation="-90 0 0" width="3" height="3" color="orange"></a-plane>
+    <a-plane position="0 -2 -15" rotation="-90 0 0" width="4" height="4" color="red" src="#imageMars"></a-plane>
+    
+    <a-animation attribute="rotation"
+               dur="9000"
+               fill="backwards"
+               to="0 360 0"
+               repeat="indefinite">
+    </a-animation>
+  </a-entity>
+  
+
+  <!--<a-text value="Hello, World!" position="0 1 15" rotation="0 0 0" color="black"></a-text>
+  <a-text value="Hello, World!"></a-text>-->
+  <a-entity
+  geometry="primitive: circle; width: 4; height: 4"
+  material="color: green"
+  text="HELLO"></a-entity>
+
+  <a-sky src="#imageGreen"></a-sky>
+</a-scene>
+  
+  
+</body>
+</html>

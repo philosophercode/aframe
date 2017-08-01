@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A-Frame PLANES</title>
+  
+  
+  
+  
+  
+</head>
+
+<body>
+  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+<a-scene>
+  <a-asset>
+    <img id="imageWater" crossorigin src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Water_quality.jpg">
+    <img id="imageMars" crossorigin src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Gusev_Spirit_01.jpg">
+    <img id="imageGreen" crossorigin src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Cumulus_clouds_panorama.jpg">
+  </a-asset>
+
+  <a-image position="0 0 15" src="https://api.urlbox.io/v1/5KDUGdjzRzTPdtOD/fde633f95edceb89b90bef91648377228a326e43/png?url=https%3A%2F%2Fwww.buzzfeed.com%2F&thumb_width=700&full_page=true"></a-image>
+  
+  <a-image position="2 0 15" src="https://api.urlbox.io/v1/5KDUGdjzRzTPdtOD/aadd5ed6e478990c7469482cea957a646e5eb19c/png?url=https%3A%2F%2Fwww.bing.com%2F&thumb_width=450&full_page=true"></a-image>
+
+  <a-torus position="0 0 -15" rotation="0 0 0" radius="7" color="white">
+    <a-animation attribute="rotation"
+               dur="1000"
+               fill="forwards"
+               to="-360 -360 -360"
+               repeat="indefinite">
+    </a-animation>
+    <a-animation attribute="material.color" 
+                 from="white" 
+                 to="black" 
+                 dur="1000"
+                 repeat="indefinite">
+    </a-animation>
+  </a-torus>
+  
+  
+  <a-torus position="0 0 -15" rotation="0 0 0" radius="6" color="white">
+    <a-animation attribute="rotation"
+               dur="1000"
+               fill="forwards"
+               to="360 -360 -360"
+               repeat="indefinite">
+    </a-animation>
+    <a-animation attribute="material.color" 
+                 from="black" 
+                 to="white" 
+                 dur="1000"
+                 repeat="indefinite">
+    </a-animation>
+  </a-torus>
+  
+  <a-torus position="0 0 -15" rotation="0 0 0" radius="5" color="white">
+    <a-animation attribute="rotation"
+               dur="1000"
+               fill="forwards"
+               to="360 360 -360"
+               repeat="indefinite">
+    </a-animation>
+    <a-animation attribute="material.color" 
+                 from="white" 
+                 to="black" 
+                 dur="1000"
+                 repeat="indefinite">
+    </a-animation>
+  </a-torus>
+
+  <a-torus position="0 0 -15" rotation="0 0 0" radius="4" color="white">
+    <a-animation attribute="rotation"
+               dur="1000"
+               fill="forwards"
+               to="-360 360 360"
+               repeat="indefinite">
+    </a-animation>
+    <a-animation attribute="material.color" 
+                 from="back" 
+                 to="white" 
+                 dur="1000"
+                 repeat="indefinite">
+    </a-animation>
+  </a-torus>
+
+
+  
+
+
+  <a-sphere position="0 0 -15" rotation="0 0 0" radius="1" color="magenta">
+    <a-animation attribute="rotation"
+               dur="15000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite">
+    </a-animation>
+  </a-sphere>
+  
+
+
+
+  
+
+  <!--<a-text value="Hello, World!" position="0 1 15" rotation="0 0 0" color="black"></a-text>
+  <a-text value="Hello, World!"></a-text>-->
+  <!--<a-entity
+  geometry="primitive: circle; width: 4; height: 4"
+  material="color: green"
+  text="HELLO"></a-entity>-->
+
+  <a-sky src="#imageGreen"></a-sky>
+</a-scene>
+  
+  
+</body>
+</html>
